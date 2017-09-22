@@ -18,7 +18,8 @@ app.use(methodOverride("_method"));
 //seedDB();//SEED THE DATABASE
 //
 var mongoDatabase = require("mongoose");
-mongoDatabase.connect("mongodb://localhost/yelp_campv12");
+//mongoDatabase.connect("mongodb://localhost/yelp_campv12");
+mongoDatabase.connect("mongodb://Bunty:yelpcamp2017@ds139675.mlab.com:39675/yelpcamp");
 
 
 var commentRoutes= require("./routes/comments"); 
