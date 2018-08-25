@@ -19,9 +19,10 @@ app.use(methodOverride("_method"));
 //
 var mongoDatabase = require("mongoose");
 
-//mongoDatabase.connect("mongodb://localhost/yelp_campv12");
-mongoDatabase.connect("mongodb://Bunty:yelpcamp2017@ds139675.mlab.com:39675/yelpcamp");
+var url =process.env.DATABASEURL || "mongodb://localhost/yelp_campv12"
 
+
+mongoDatabase.connect(url);
 
 var commentRoutes= require("./routes/comments"); 
 var campgroundRoutes = require("./routes/campgrounds");
